@@ -1,0 +1,1753 @@
+﻿///TODO: https://www.khronos.org/registry/OpenCL/specs/2.2/pdf/OpenCL_API.pdf
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateSubDevices(CLDevicePtr in_device,
+        //                   const CLDevicePartitionProperty* properties,
+        //                   uint num_devices,
+        //                   CLDevicePtr* out_devices,
+        //                   uint* num_devices_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clRetainDevice(CLDevicePtr device) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clReleaseDevice(CLDevicePtr device) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetDefaultDeviceCommandQueue(CLContextPtr context,
+        //                               CLDevicePtr device,
+        //                               CLCommandQueuePtr command_queue) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetDeviceAndHostTimer(CLDevicePtr device,
+        //                        ulong* device_timestamp,
+        //                        ulong* host_timestamp) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetHostTimer(CLDevicePtr device,
+        //               ulong* host_timestamp) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetContextDestructorCallback(CLContextPtr context,
+        //                               void (CL_CALLBACK* pfn_notify)(CLContextPtr context,
+        //                                                              IntPtr user_data),
+        //                               IntPtr user_data) CL_API_SUFFIX__VERSION_3_0;
+
+
+
+        //        [DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
+        //        clCreateSubBuffer(CLMemoryPtr buffer,
+        //                  CLMemoryFlags flags,
+        //                  CLBufferCreateType buffer_create_type,
+        //                  IntPtr buffer_create_info,
+        //                  [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_1_1;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreatePipe(CLContextPtr context,
+        //             CLMemoryFlags flags,
+        //             uint pipe_packet_size,
+        //             uint pipe_max_packets,
+        //             const cl_pipe_properties* properties,
+        //             [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_2_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateBufferWithProperties(CLContextPtr context,
+        //                             const cl_mem_properties* properties,
+        //                             CLMemoryFlags flags,
+        //                             int size,
+        //                             IntPtr host_ptr,
+        //                             [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_3_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateImageWithProperties(CLContextPtr context,
+        //                            const cl_mem_properties* properties,
+        //                            CLMemoryFlags flags,
+        //                            CLImageFormat image_format,
+        //                            const CLImageDescription* image_desc,
+        //                            IntPtr host_ptr,
+        //                            [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_3_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetPipeInfo(CLMemoryPtr pipe,
+        //              CLPipeInfo param_name,
+        //              uint param_value_size,
+        //              IntPtr param_value,
+        //              [Out] out uint param_value_size_ret) CL_API_SUFFIX__VERSION_2_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetMemObjectDestructorCallback(CLMemoryPtr memobj,
+        //                                 void (CL_CALLBACK* pfn_notify)(CLMemoryPtr memobj,
+        //                                                                 IntPtr user_data),
+        //                                 IntPtr user_data) CL_API_SUFFIX__VERSION_1_1;
+
+
+
+        //* SVM Allocation APIs */
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSVMAlloc(CLContextPtr context,
+        //           CLSVMMemoryFlags flags,
+        //           int size,
+        //           uint alignment) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSVMFree(CLContextPtr context,
+        //          IntPtr svm_pointer) CL_API_SUFFIX__VERSION_2_0;
+
+
+
+        //* Sampler APIs */
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateSamplerWithProperties(CLContextPtr context,
+        //                              const CLSamplerProperties* sampler_properties,
+        //                              [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_2_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateProgramWithBuiltInKernels(CLContextPtr context,
+        //                                  uint num_devices,
+        //                                  [Out] out CLDevicePtr[] device_list,
+        //                                  string kernel_names,
+        //                                  [Out] out CLResult errcode_ret) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateProgramWithIL(CLContextPtr context,
+        //                     IntPtr il,
+        //                     uint length,
+        //                     [Out] out CLResult errcode_ret) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clLinkProgram(CLContextPtr context,
+        //              uint num_devices,
+        //              [Out] out CLDevicePtr[] device_list,
+        //              string options,
+        //              uint num_input_programs,
+        //              [Out] out CLProgramPtr[] input_programs,
+        //              void (CL_CALLBACK* pfn_notify)(CLProgramPtr program,
+        //                                               IntPtr user_data),
+        //              IntPtr user_data,
+        //              [Out] out CLResult errcode_ret) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetProgramReleaseCallback(CLProgramPtr program,
+        //                            void (CL_CALLBACK* pfn_notify)(CLProgramPtr program,
+        //                                                            IntPtr user_data),
+        //                            IntPtr user_data) CL_API_SUFFIX__VERSION_2_2_DEPRECATED;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetProgramSpecializationConstant(CLProgramPtr program,
+        //                                   uint spec_id,
+        //                                   uint spec_size,
+        //                                   IntPtr spec_value) CL_API_SUFFIX__VERSION_2_2;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clUnloadPlatformCompiler(CLPlatformPtr platform) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCloneKernel(CLKernelPtr source_kernel,
+        //              [Out] out CLResult errcode_ret) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetKernelArgSVMPointer(CLKernelPtr kernel,
+        //                         uint arg_index,
+        //                         IntPtr arg_value) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetKernelExecInfo(CLKernelPtr kernel,
+        //                    CLKernelExecInfo param_name,
+        //                    uint param_value_size,
+        //                    IntPtr param_value) CL_API_SUFFIX__VERSION_2_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetKernelSubGroupInfo(CLKernelPtr kernel,
+        //                        CLDevicePtr device,
+        //                        cl_kernel_sub_group_info param_name,
+        //                        uint input_value_size,
+        //                        IntPtr input_value,
+        //                        uint param_value_size,
+        //                        IntPtr param_value,
+        //                        [Out] out uint param_value_size_ret) ;
+
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //        CLResult clGetEventInfo(CLEventPtr         evt,
+        //               CLEventInfo param_name,
+        //               uint param_value_size,
+        //               IntPtr param_value,
+        //               [Out] out uint param_value_size_ret) ;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateUserEvent(CLContextPtr context,
+        //                  [Out] out CLResult errcode_ret) CL_API_SUFFIX__VERSION_1_1;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetUserEventStatus(CLEventPtr   evt,
+        //                     int execution_status) CL_API_SUFFIX__VERSION_1_1;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetEventCallback(CLEventPtr    evt,
+        //                   int command_exec_callback_type,
+        //                   void (CL_CALLBACK* pfn_notify)(CLEventPtr evt,
+        //                                                   int event_command_status,
+        //                                                   IntPtr user_data),
+        //                   IntPtr user_data) CL_API_SUFFIX__VERSION_1_1;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueReadBufferRect(CLCommandQueuePtr command_queue,
+        //                        CLMemoryPtr buffer,
+        //                        bool blocking_read,
+        //                        const uint* buffer_origin,
+        //                        const uint* host_origin,
+        //                        Vector3i region,
+        //                        uint buffer_row_pitch,
+        //                        uint buffer_slice_pitch,
+        //                        uint host_row_pitch,
+        //                        uint host_slice_pitch,
+        //                        IntPtr ptr,
+        //                        int num_events_in_wait_list,
+        //                        CLEventPtr[] event_wait_list,
+        //                        [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_1_1;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueWriteBufferRect(CLCommandQueuePtr command_queue,
+        //                         CLMemoryPtr buffer,
+        //                         bool blocking_write,
+        //                         const uint* buffer_origin,
+        //                         const uint* host_origin,
+        //                         Vector3i region,
+        //                         uint buffer_row_pitch,
+        //                         uint buffer_slice_pitch,
+        //                         uint host_row_pitch,
+        //                         uint host_slice_pitch,
+        //                         IntPtr ptr,
+        //                         int num_events_in_wait_list,
+        //                         CLEventPtr[] event_wait_list,
+        //                         [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_1_1;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueFillBuffer(CLCommandQueuePtr command_queue,
+        //                    CLMemoryPtr buffer,
+        //                    IntPtr pattern,
+        //                    uint pattern_size,
+        //                    int offset,
+        //                    int size,
+        //                    int num_events_in_wait_list,
+        //                    CLEventPtr[] event_wait_list,
+        //                    [Out] out CLEventPtr evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueCopyBufferRect(CLCommandQueuePtr command_queue,
+        //                        CLMemoryPtr src_buffer,
+        //                        CLMemoryPtr dst_buffer,
+        //                        Vector3i src_origin,
+        //                        Vector3i dst_origin,
+        //                        Vector3i region,
+        //                        uint src_row_pitch,
+        //                        uint src_slice_pitch,
+        //                        uint dst_row_pitch,
+        //                        uint dst_slice_pitch,
+        //                        int num_events_in_wait_list,
+        //                        CLEventPtr[] event_wait_list,
+        //                        [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_1_1;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueFillImage(CLCommandQueuePtr command_queue,
+        //                   CLMemoryPtr image,
+        //                   IntPtr fill_color,
+        //                   Vector3i origin,
+        //                   Vector3i region,
+        //                   int num_events_in_wait_list,
+        //                   CLEventPtr[] event_wait_list,
+        //                   [Out] out CLEventPtr evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMigrateMemObjects(CLCommandQueuePtr command_queue,
+        //                           uint num_mem_objects,
+        //                           const CLMemoryPtr* mem_objects,
+        //                           CLMemoryMigrationFlags flags,
+        //                           int num_events_in_wait_list,
+        //                           CLEventPtr[] event_wait_list,
+        //                           CLEventPtr*             evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMarkerWithWaitList(CLCommandQueuePtr command_queue,
+        //                            int num_events_in_wait_list,
+        //                            CLEventPtr[] event_wait_list,
+        //                            [Out] out CLEventPtr evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueBarrierWithWaitList(CLCommandQueuePtr command_queue,
+        //                             int num_events_in_wait_list,
+        //                             CLEventPtr[] event_wait_list,
+        //                             [Out] out CLEventPtr evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMFree(CLCommandQueuePtr command_queue,
+        //                 uint num_svm_pointers,
+        //                 IntPtr svm_pointers[],
+        //                 void (CL_CALLBACK* pfn_free_func)(CLCommandQueuePtr queue,
+        //                                                    uint num_svm_pointers,
+        //                                                    IntPtr svm_pointers[],
+        //                                                    IntPtr user_data),
+        //                 IntPtr user_data,
+        //                 uint           num_events_in_wait_list,
+        //                 CLEventPtr[] event_wait_list,
+        //                 CLEventPtr * evt) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMemcpy(CLCommandQueuePtr command_queue,
+        //                   bool blocking_copy,
+        //                   IntPtr dst_ptr,
+        //                   IntPtr src_ptr,
+        //                   int size,
+        //                   int num_events_in_wait_list,
+        //                   CLEventPtr[] event_wait_list,
+        //                   [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMemFill(CLCommandQueuePtr command_queue,
+        //                    IntPtr svm_ptr,
+        //                    IntPtr pattern,
+        //                    uint pattern_size,
+        //                    int size,
+        //                    int num_events_in_wait_list,
+        //                    CLEventPtr[] event_wait_list,
+        //                    [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMap(CLCommandQueuePtr command_queue,
+        //                bool blocking_map,
+        //                CLMapFlags flags,
+        //                IntPtr svm_ptr,
+        //                int size,
+        //                int num_events_in_wait_list,
+        //                CLEventPtr[] event_wait_list,
+        //                [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_2_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMUnmap(CLCommandQueuePtr command_queue,
+        //                  IntPtr svm_ptr,
+        //                  int num_events_in_wait_list,
+        //                  CLEventPtr[] event_wait_list,
+        //                  [Out] out CLEventPtr evt) CL_API_SUFFIX__VERSION_2_0;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMigrateMem(CLCommandQueuePtr command_queue,
+        //                       uint num_svm_pointers,
+        //                       const IntPtr* svm_pointers,
+        //                       const uint* sizes,
+        //                       CLMemoryMigrationFlags flags,
+        //                       int num_events_in_wait_list,
+        //                       CLEventPtr[] event_wait_list,
+        //                       CLEventPtr*               evt) ;
+
+
+        //* Extension function access
+        // *
+        // * Returns the extension function address for the given function name,
+        // * or NULL if a valid function can not be found.  The client must
+        // * check to make sure the address is not NULL, before using or
+        // * calling the returned function address.
+        // */
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetExtensionFunctionAddressForPlatform(CLPlatformPtr platform,
+        //                                         string func_name) ;
+
+
+        //#ifdef CL_USE_DEPRECATED_OPENCL_1_0_APIS
+        //    /*
+        //     *  WARNING:
+        //     *     This API introduces mutable state into the OpenCL implementation. It has been REMOVED
+        //     *  to better facilitate thread safety.  The 1.0 API is not thread safe. It is not tested by the
+        //     *  OpenCL 1.1 conformance test, and consequently may not work or may not work dependably.
+        //     *  It is likely to be non-performant. Use of this API is not advised. Use at your own risk.
+        //     *
+        //     *  Software developers previously relying on this API are instructed to set the command queue
+        //     *  properties when creating the queue, instead.
+        //     */
+        //    [DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //    clSetCommandQueueProperty(CLCommandQueuePtr command_queue,
+        //                              CLCommandQueueProperties properties,
+        //                              bool enable,
+        //                              CLCommandQueueProperties* old_properties) CL_API_SUFFIX__VERSION_1_0_DEPRECATED;
+        //#endif /* CL_USE_DEPRECATED_OPENCL_1_0_APIS */
+
+        //[Obsolete][DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //        CLResultclEnqueueBarrier(CLCommandQueuePtr command_queue) CL_API_SUFFIX__VERSION_1_1_DEPRECATED;
+
+        //[Obsolete][DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clUnloadCompiler(void) CL_API_SUFFIX__VERSION_1_1_DEPRECATED;
+
+        //***************************************************************
+        //* cl_khr_command_buffer
+        //***************************************************************/
+
+        //typedef ulong         cl_device_command_buffer_capabilities_khr;
+        //typedef struct _cl_command_buffer_khr*cl_command_buffer_khr;
+        //typedef uint             cl_sync_point_khr;
+        //typedef uint             cl_command_buffer_info_khr;
+        //typedef uint             cl_command_buffer_state_khr;
+        //typedef ulong       cl_command_buffer_properties_khr;
+        //typedef ulong         cl_command_buffer_flags_khr;
+        //typedef ulong       cl_ndrange_kernel_command_properties_khr;
+        //typedef struct _cl_mutable_command_khr*cl_mutable_command_khr;
+
+
+        //typedef cl_command_buffer_khr(CL_API_CALL*
+        //clCreateCommandBufferKHR_fn)(
+        //    uint num_queues,
+        //    const CLCommandQueuePtr* queues,
+        //    const cl_command_buffer_properties_khr* properties,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //typedef int(CL_API_CALL*
+        //clFinalizeCommandBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //typedef int(CL_API_CALL*
+        //clRetainCommandBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //typedef int(CL_API_CALL*
+        //clReleaseCommandBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueCommandBufferKHR_fn)(
+        //    uint num_queues,
+        //    CLCommandQueuePtr * queues,
+        //    cl_command_buffer_khr command_buffer,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandBarrierWithWaitListKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandCopyBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_buffer,
+        //    int src_offset,
+        //    int dst_offset,
+        //    int size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandCopyBufferRectKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_buffer,
+        //    Vector3i src_origin,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint src_row_pitch,
+        //    uint src_slice_pitch,
+        //    uint dst_row_pitch,
+        //    uint dst_slice_pitch,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandCopyBufferToImageKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_image,
+        //    int src_offset,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandCopyImageKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_image,
+        //    CLMemoryPtr dst_image,
+        //    Vector3i src_origin,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandCopyImageToBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_image,
+        //    CLMemoryPtr dst_buffer,
+        //    Vector3i src_origin,
+        //    Vector3i region,
+        //    int dst_offset,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandFillBufferKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr buffer,
+        //    IntPtr pattern,
+        //    uint pattern_size,
+        //    int offset,
+        //    int size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandFillImageKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr image,
+        //    IntPtr fill_color,
+        //    Vector3i origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clCommandNDRangeKernelKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    const cl_ndrange_kernel_command_properties_khr* properties,
+        //    CLKernelPtr kernel,
+        //    uint work_dim,
+        //    const uint* global_work_offset,
+        //    const uint* global_work_size,
+        //    const uint* local_work_size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //typedef int(CL_API_CALL*
+        //clGetCommandBufferInfoKHR_fn)(
+        //    cl_command_buffer_khr command_buffer,
+        //    cl_command_buffer_info_khr param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    uint * param_value_size_ret);
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateCommandBufferKHR(
+        //    uint num_queues,
+        //    const CLCommandQueuePtr* queues,
+        //    const cl_command_buffer_properties_khr* properties,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clFinalizeCommandBufferKHR(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clRetainCommandBufferKHR(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clReleaseCommandBufferKHR(
+        //    cl_command_buffer_khr command_buffer) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueCommandBufferKHR(
+        //    uint num_queues,
+        //    CLCommandQueuePtr* queues,
+        //    cl_command_buffer_khr command_buffer,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandBarrierWithWaitListKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandCopyBufferKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_buffer,
+        //    int src_offset,
+        //    int dst_offset,
+        //    int size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandCopyBufferRectKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_buffer,
+        //    Vector3i src_origin,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint src_row_pitch,
+        //    uint src_slice_pitch,
+        //    uint dst_row_pitch,
+        //    uint dst_slice_pitch,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandCopyBufferToImageKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_buffer,
+        //    CLMemoryPtr dst_image,
+        //    int src_offset,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandCopyImageKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_image,
+        //    CLMemoryPtr dst_image,
+        //    Vector3i src_origin,
+        //    Vector3i dst_origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandCopyImageToBufferKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr src_image,
+        //    CLMemoryPtr dst_buffer,
+        //    Vector3i src_origin,
+        //    Vector3i region,
+        //    int dst_offset,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandFillBufferKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr buffer,
+        //    IntPtr pattern,
+        //    uint pattern_size,
+        //    int offset,
+        //    int size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandFillImageKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    CLMemoryPtr image,
+        //    IntPtr fill_color,
+        //    Vector3i origin,
+        //    Vector3i region,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCommandNDRangeKernelKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    CLCommandQueuePtr command_queue,
+        //    const cl_ndrange_kernel_command_properties_khr* properties,
+        //    CLKernelPtr kernel,
+        //    uint work_dim,
+        //    const uint* global_work_offset,
+        //    const uint* global_work_size,
+        //    const uint* local_work_size,
+        //    uint num_sync_points_in_wait_list,
+        //    const cl_sync_point_khr* sync_point_wait_list,
+        //    cl_sync_point_khr* sync_point,
+        //    cl_mutable_command_khr* mutable_handle) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetCommandBufferInfoKHR(
+        //    cl_command_buffer_khr command_buffer,
+        //    cl_command_buffer_info_khr param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    [Out] out uint param_value_size_ret) ;
+
+
+        //* Memory object destruction
+        // *
+        // * Apple extension for use to manage externally allocated buffers used with CLMemoryPtr objects with UseHostPointer
+        // *
+        // * Registers a user callback function that will be called when the memory object is deleted and its resources
+        // * freed. Each call to clSetMemObjectCallbackFn registers the specified user callback function on a callback
+        // * stack associated with memobj. The registered user callback functions are called in the reverse order in
+        // * which they were registered. The user callback functions are called and then the memory object is deleted
+        // * and its resources freed. This provides a mechanism for the application (and libraries) using memobj to be
+        // * notified when the memory referenced by host_ptr, specified when the memory object is created and used as
+        // * the storage bits for the memory object, can be reused or freed.
+        // *
+        // * The application may not call CL api's with the CLMemoryPtr object passed to the pfn_notify.
+        // *
+        // * Please check for the "cl_APPLE_SetMemObjectDestructor" extension using GetDeviceInfo(Extensions)
+        // * before using.
+        // */
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)] 
+        //        clSetMemObjectDestructorAPPLE(  CLMemoryPtr memobj,
+        //                                        void (* pfn_notify)(CLMemoryPtr memobj, IntPtr user_data),
+        //                                        IntPtr user_data)             ;
+
+
+        //* Context Logging Functions
+        // *
+        // * The next three convenience functions are intended to be used as the pfn_notify parameter to CreateContext().
+        // * Please check for the "cl_APPLE_ContextLoggingFunctions" extension using GetDeviceInfo(Extensions)
+        // * before using.
+        // *
+        // * clLogMessagesToSystemLog forwards on all log messages to the Apple System Logger
+        // */
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)] clLogMessagesToSystemLogAPPLE(  const char * errstr,
+        //                                            const IntPtr private_info,
+        //                                            uint       cb,
+        //                                            IntPtr       user_data)  ;
+
+        //* clLogMessagesToStdout sends all log messages to the file descriptor stdout */
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)] clLogMessagesToStdoutAPPLE(   const char * errstr,
+        //                                          const IntPtr private_info,
+        //                                          uint       cb,
+        //                                          IntPtr       user_data)    ;
+
+        //* clLogMessagesToStderr sends all log messages to the file descriptor stderr */
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)] clLogMessagesToStderrAPPLE(   const char * errstr,
+        //                                          const IntPtr private_info,
+        //                                          uint       cb,
+        //                                          IntPtr       user_data)    ;
+
+
+        //************************
+        //* cl_khr_icd extension *
+        //************************/
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clIcdGetPlatformIDsKHR(uint          num_entries,
+        //                       CLPlatformPtr * platforms,
+        //                       uint *        num_platforms);
+
+        //typedef int
+        //(CL_API_CALL* clIcdGetPlatformIDsKHR_fn)(uint num_entries,
+        //                                         CLPlatformPtr * platforms,
+        //                                         uint * num_platforms);
+
+
+        //*******************************
+        // * cl_khr_il_program extension *
+        // *******************************/
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateProgramWithILKHR(CLContextPtr   context,
+        //                         const IntPtr il,
+        //                         uint       length,
+        //                         int *     errcode_ret);
+
+        //typedef CLProgramPtr
+        //(CL_API_CALL* clCreateProgramWithILKHR_fn)(CLContextPtr context,
+        //                                           IntPtr il,
+        //                                           uint       length,
+        //                                           int *     errcode_ret) ;
+
+        //* Extension: cl_khr_image2d_from_buffer
+        // *
+        // * This extension allows a 2D image to be created from a CLMemoryPtr buffer without
+        // * a copy. The type associated with a 2D image created from a buffer in an
+        // * OpenCL program is image2d_t. Both the sampler and sampler-less read_image
+        // * built-in functions are supported for 2D images and 2D images created from
+        // * a buffer.  Similarly, the write_image built-ins are also supported for 2D
+        // * images created from a buffer.
+        // *
+        // * When the 2D image from buffer is created, the client must specify the
+        // * width, height, image format (i.e. channel order and channel data type)
+        // * and optionally the row pitch.
+        // *
+        // * The pitch specified must be a multiple of
+        // * CL_DEVICE_IMAGE_PITCH_ALIGNMENT_KHR pixels.
+        // * The base address of the buffer must be aligned to
+        // * CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR pixels.
+        // */
+
+
+        //**************************************
+        // * cl_khr_terminate_context extension *
+        // **************************************/
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clTerminateContextKHR(CLContextPtr context) ;
+
+        //typedef int
+        //(CL_API_CALL* clTerminateContextKHR_fn)(CLContextPtr context) ;
+
+
+        //*
+        // * Extension: cl_khr_spir
+        // *
+        // * This extension adds support to create an OpenCL program object from a
+        // * Standard Portable Intermediate Representation (SPIR) instance
+        // */
+
+
+
+        //*****************************************
+        // * cl_khr_create_command_queue extension *
+        // *****************************************/
+
+        ////typedef ulong cl_queue_properties_khr;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateCommandQueueWithPropertiesKHR(CLContextPtr context,
+        //                                      CLDevicePtr device,
+        //                                      const cl_queue_properties_khr* properties,
+        //                                      [Out] out CLResult errcode_ret) ;
+
+        //typedef CLCommandQueuePtr
+        //(CL_API_CALL* clCreateCommandQueueWithPropertiesKHR_fn)(CLContextPtr context,
+        //                                                        CLDevicePtr device,
+        //                                                        const cl_queue_properties_khr* properties,
+        //                                                        [Out] out CLResult errcode_ret) ;
+
+
+        //******************************************
+        //* cl_nv_device_attribute_query extension *
+        //******************************************/
+
+        //* cl_nv_device_attribute_query extension - no extension const int since it has no functions */
+
+
+        //*********************************
+        //* cl_amd_device_attribute_query *
+        //*********************************/
+
+
+        //*********************************
+        //* cl_arm_printf extension
+        //*********************************/
+
+
+        //***********************************
+        //* cl_ext_device_fission extension
+        //***********************************/
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clReleaseDeviceEXT(CLDevicePtr device) CL_API_SUFFIX__VERSION_1_1;
+
+        //typedef int
+        //(CL_API_CALL* clReleaseDeviceEXT_fn)(CLDevicePtr device) CL_API_SUFFIX__VERSION_1_1;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clRetainDeviceEXT(CLDevicePtr device) CL_API_SUFFIX__VERSION_1_1;
+
+        //typedef int
+        //(CL_API_CALL* clRetainDeviceEXT_fn)(CLDevicePtr device) CL_API_SUFFIX__VERSION_1_1;
+
+        ////typedef ulong  cl_device_partition_property_ext;
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateSubDevicesEXT(CLDevicePtr   in_device,
+        //                      const cl_device_partition_property_ext * properties,
+        //                      uint        num_entries,
+        //                      CLDevicePtr * out_devices,
+        //                      uint *      num_devices) CL_API_SUFFIX__VERSION_1_1;
+
+        //typedef int
+        //(CL_API_CALL* clCreateSubDevicesEXT_fn)(CLDevicePtr in_device,
+        //                                         const cl_device_partition_property_ext* properties,
+        //                                         uint        num_entries,
+        //                                         CLDevicePtr * out_devices,
+        //                                         uint *      num_devices) CL_API_SUFFIX__VERSION_1_1;
+
+
+        //***********************************
+        // * cl_ext_migrate_memobject extension definitions
+        // ***********************************/
+
+        ////typedef ulong cl_mem_migration_flags_ext;
+
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMigrateMemObjectEXT(CLCommandQueuePtr command_queue,
+        //                             uint          num_mem_objects,
+        //                             CLMemoryPtr[] mem_objects,
+        //                             cl_mem_migration_flags_ext flags,
+        //                             uint          num_events_in_wait_list,
+        //                             const CLEventPtr * event_wait_list,
+        //                             CLEventPtr *       evt);
+
+        //typedef int
+        //(CL_API_CALL* clEnqueueMigrateMemObjectEXT_fn)(CLCommandQueuePtr command_queue,
+        //                                               uint num_mem_objects,
+        //                                               const CLMemoryPtr* mem_objects,
+        //                                               cl_mem_migration_flags_ext flags,
+        //                                               uint          num_events_in_wait_list,
+        //                                               const CLEventPtr * event_wait_list,
+        //                                               CLEventPtr *       evt);
+
+
+
+        //*********************************
+        //* cl_qcom_ext_host_ptr extension
+        //*********************************/
+
+        ////typedef uint                                   cl_image_pitch_info_qcom;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetDeviceImageInfoQCOM(CLDevicePtr             device,
+        //                         uint                   Width,
+        //                         uint                   Height,
+        //                         const CLImageFormat   *image_format,
+        //                         cl_image_pitch_info_qcom param_name,
+        //                         uint                   param_value_size,
+        //                         void                    *param_value,
+        //                         uint                  *param_value_size_ret);
+
+
+
+
+
+        //******************************************
+        // * cl_img_use_gralloc_ptr extension *
+        // ******************************************/
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueAcquireGrallocObjectsIMG(CLCommandQueuePtr      command_queue,
+        //                                  uint               num_objects,
+        //                                  const CLMemoryPtr *        mem_objects,
+        //                                  uint               num_events_in_wait_list,
+        //                                  const CLEventPtr *      event_wait_list,
+        //                                  [Out] out CLEventPtr evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueReleaseGrallocObjectsIMG(CLCommandQueuePtr      command_queue,
+        //                                  uint               num_objects,
+        //                                  const CLMemoryPtr *        mem_objects,
+        //                                  uint               num_events_in_wait_list,
+        //                                  const CLEventPtr *      event_wait_list,
+        //                                  [Out] out CLEventPtr evt) ;
+
+        //******************************************
+        // * cl_img_generate_mipmap extension *
+        // ******************************************/
+
+        ////typedef uint cl_mipmap_filter_mode_img;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueGenerateMipmapIMG(CLCommandQueuePtr          command_queue,
+        //                           CLMemoryPtr                    src_image,
+        //                           CLMemoryPtr                    dst_image,
+        //                           cl_mipmap_filter_mode_img mipmap_filter_mode,
+        //                           const uint              *array_region,
+        //                           const uint              *mip_region,
+        //                           uint                   num_events_in_wait_list,
+        //                           const CLEventPtr            *event_wait_list,
+        //                           CLEventPtr *evt) ;
+
+        //******************************************
+        // * cl_img_mem_properties extension *
+        // ******************************************/
+        //* To be used wiith the CL_MEM_ALLOC_FLAGS_IMG property */
+        ////typedef ulong cl_mem_alloc_flags_img;
+
+        //*********************************
+        //* cl_khr_subgroups extension
+        //*********************************/
+        ////typedef uint             cl_kernel_sub_group_info;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetKernelSubGroupInfoKHR(CLKernelPtr    in_kernel,
+        //                           CLDevicePtr in_device,
+        //                           cl_kernel_sub_group_info param_name,
+        //                           uint       input_value_size,
+        //                           const IntPtr input_value,
+        //                           uint       param_value_size,
+        //                           IntPtr       param_value,
+        //                           uint *     param_value_size_ret) CL_API_SUFFIX__VERSION_2_0_DEPRECATED;
+
+        //typedef int
+        //(CL_API_CALL* clGetKernelSubGroupInfoKHR_fn)(CLKernelPtr in_kernel,
+        //                                             CLDevicePtr in_device,
+        //                                             cl_kernel_sub_group_info param_name,
+        //                                             uint input_value_size,
+        //                                              IntPtr input_value,
+        //                                              uint       param_value_size,
+        //                                              IntPtr       param_value,
+        //                                              uint *     param_value_size_ret) CL_API_SUFFIX__VERSION_2_0_DEPRECATED;
+
+
+        //***************************************************************
+        //* cl_khr_suggested_local_work_size
+        //***************************************************************/
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetKernelSuggestedLocalWorkSizeKHR(
+        //    CLCommandQueuePtr command_queue,
+        //    CLKernelPtr kernel,
+        //    uint work_dim,
+        //    const uint* global_work_offset,
+        //    const uint* global_work_size,
+        //    uint* suggested_local_work_size) CL_API_SUFFIX__VERSION_3_0;
+
+        //typedef int(CL_API_CALL*
+        //clGetKernelSuggestedLocalWorkSizeKHR_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    CLKernelPtr kernel,
+        //    uint work_dim,
+        //    const uint* global_work_offset,
+        //    const uint* global_work_size,
+        //    uint* suggested_local_work_size) CL_API_SUFFIX__VERSION_3_0;
+
+
+        //***************************************************************
+        //* cl_khr_external_memory
+        //***************************************************************/
+
+        //typedef uint             cl_external_memory_handle_type_khr;
+
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueAcquireExternalMemObjectsKHR_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_mem_objects,
+        //    const CLMemoryPtr* mem_objects,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) CL_API_SUFFIX__VERSION_3_0;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueReleaseExternalMemObjectsKHR_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_mem_objects,
+        //    const CLMemoryPtr* mem_objects,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) CL_API_SUFFIX__VERSION_3_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueAcquireExternalMemObjectsKHR(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_mem_objects,
+        //    const CLMemoryPtr* mem_objects,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) CL_API_SUFFIX__VERSION_3_0;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueReleaseExternalMemObjectsKHR(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_mem_objects,
+        //    const CLMemoryPtr* mem_objects,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) CL_API_SUFFIX__VERSION_3_0;
+
+
+        //***************************************************************
+        //* cl_khr_external_semaphore
+        //***************************************************************/
+
+
+        //typedef int(CL_API_CALL*
+        //clGetSemaphoreHandleForTypeKHR_fn)(
+        //    cl_semaphore_khr sema_object,
+        //    CLDevicePtr device,
+        //    cl_external_semaphore_handle_type_khr handle_type,
+        //    uint handle_size,
+        //    IntPtr handle_ptr,
+        //    uint* handle_size_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetSemaphoreHandleForTypeKHR(
+        //    cl_semaphore_khr sema_object,
+        //    CLDevicePtr device,
+        //    cl_external_semaphore_handle_type_khr handle_type,
+        //    uint handle_size,
+        //    IntPtr handle_ptr,
+        //    uint* handle_size_ret) ;
+
+        //***************************************************************
+        //* cl_khr_semaphore
+        //***************************************************************/
+
+        //* cl_semaphore_type */
+        ////const int CL_SEMAPHORE_TYPE_BINARY_KHR                        1
+
+        //* uint */
+        ////const int CL_PLATFORM_SEMAPHORE_TYPES_KHR                     0x2036
+
+        //* CLDeviceInfo */
+        ////const int CL_DEVICE_SEMAPHORE_TYPES_KHR                       0x204C
+
+        //* cl_semaphore_info_khr */
+        ////const int CL_SEMAPHORE_CONTEXT_KHR                            0x2039
+        ////const int CL_SEMAPHORE_REFERENCE_COUNT_KHR                    0x203A
+        ////const int CL_SEMAPHORE_PROPERTIES_KHR                         0x203B
+        ////const int CL_SEMAPHORE_PAYLOAD_KHR                            0x203C
+
+        //* cl_semaphore_info_khr or cl_semaphore_properties_khr */
+        ////const int CL_SEMAPHORE_TYPE_KHR                               0x203D
+        //* enum CL_DEVICE_HANDLE_LIST_KHR */
+        //* enum CL_DEVICE_HANDLE_LIST_END_KHR */
+
+        //* CLCommandType */
+        ////const int CL_COMMAND_SEMAPHORE_WAIT_KHR                       0x2042
+        ////const int CL_COMMAND_SEMAPHORE_SIGNAL_KHR                     0x2043
+
+        //* Error codes */
+        ////const int CL_INVALID_SEMAPHORE_KHR                            -1142
+
+
+        //typedef cl_semaphore_khr(CL_API_CALL*
+        //clCreateSemaphoreWithPropertiesKHR_fn)(
+        //    CLContextPtr context,
+        //    const cl_semaphore_properties_khr* sema_props,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueWaitSemaphoresKHR_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sema_objects,
+        //    const cl_semaphore_khr* sema_objects,
+        //    const cl_semaphore_payload_khr* sema_payload_list,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueSignalSemaphoresKHR_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sema_objects,
+        //    const cl_semaphore_khr* sema_objects,
+        //    const cl_semaphore_payload_khr* sema_payload_list,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //typedef int(CL_API_CALL*
+        //clGetSemaphoreInfoKHR_fn)(
+        //    cl_semaphore_khr sema_object,
+        //    cl_semaphore_info_khr param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    [Out] out uint param_value_size_ret) ;
+
+        //typedef int(CL_API_CALL*
+        //clReleaseSemaphoreKHR_fn)(
+        //    cl_semaphore_khr sema_object) ;
+
+        //typedef int(CL_API_CALL*
+        //clRetainSemaphoreKHR_fn)(
+        //    cl_semaphore_khr sema_object) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateSemaphoreWithPropertiesKHR(
+        //    CLContextPtr context,
+        //    const cl_semaphore_properties_khr* sema_props,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueWaitSemaphoresKHR(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sema_objects,
+        //    const cl_semaphore_khr* sema_objects,
+        //    const cl_semaphore_payload_khr* sema_payload_list,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSignalSemaphoresKHR(
+        //    CLCommandQueuePtr command_queue,
+        //    uint num_sema_objects,
+        //    const cl_semaphore_khr* sema_objects,
+        //    const cl_semaphore_payload_khr* sema_payload_list,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetSemaphoreInfoKHR(
+        //    cl_semaphore_khr sema_object,
+        //    cl_semaphore_info_khr param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    [Out] out uint param_value_size_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clReleaseSemaphoreKHR(
+        //    cl_semaphore_khr sema_object) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clRetainSemaphoreKHR(
+        //    cl_semaphore_khr sema_object) ;
+
+
+
+        //        /**********************************
+        //         * cl_arm_import_memory extension *
+        //         **********************************/
+
+        //        /* This extension adds a new function that allows for direct memory import into
+        //         * OpenCL via the clImportMemoryARM function.
+        //         *
+        //         * Memory imported through this interface will be mapped into the device's page
+        //         * tables directly, providing zero copy access. It will never fall back to copy
+        //         * operations and aliased buffers.
+        //         *
+        //         * Types of memory supported for import are specified as additional extension
+        //         * strings.
+        //         *
+        //         * This extension produces CLMemoryPtr allocations which are compatible with all other
+        //         * users of CLMemoryPtr in the standard API.
+        //         *
+        //         * This extension maps pages with the same properties as the normal buffer creation
+        //         * function Create.
+        //         */
+        //        [DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clImportMemoryARM( CLContextPtr context,
+        //                   CLMemoryFlags flags,
+        //                   const cl_import_properties_arm *properties,
+        //                   IntPtrmemory,
+        //                   int size,
+        //                   int *errcode_ret) ;
+
+
+        //******************************************
+        // * cl_arm_shared_virtual_memory extension *
+        // ******************************************/
+
+
+        ////typedef ulong cl_svm_mem_flags_arm;
+        ////typedef uint     cl_kernel_exec_info_arm;
+        ////typedef ulong cl_device_svm_capabilities_arm;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSVMAllocARM(CLContextPtr       context,
+        //              cl_svm_mem_flags_arm flags,
+        //              uint           size,
+        //              uint          alignment) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSVMFreeARM(CLContextPtr        context,
+        //             IntPtr            svm_pointer) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMFreeARM(CLCommandQueuePtr  command_queue,
+        //                    uint           num_svm_pointers,
+        //                    IntPtr            svm_pointers[],
+        //                    void(CL_CALLBACK * pfn_free_func)(CLCommandQueuePtr queue,
+        //                                                       uint          num_svm_pointers,
+        //                                                       IntPtr svm_pointers[],
+        //                                                       IntPtr user_data),
+        //                    IntPtr user_data,
+        //                    uint           num_events_in_wait_list,
+        //                    const CLEventPtr *  event_wait_list,
+        //                    CLEventPtr *        evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMemcpyARM(CLCommandQueuePtr  command_queue,
+        //                      bool           blocking_copy,
+        //                      IntPtr            dst_ptr,
+        //                      const IntPtr      src_ptr,
+        //                      uint            size,
+        //                      uint           num_events_in_wait_list,
+        //                      const CLEventPtr *  event_wait_list,
+        //                      CLEventPtr *        evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMemFillARM(CLCommandQueuePtr  command_queue,
+        //                       IntPtr            svm_ptr,
+        //                       const IntPtr      pattern,
+        //                       uint            pattern_size,
+        //                       uint            size,
+        //                       uint           num_events_in_wait_list,
+        //                       const CLEventPtr *  event_wait_list,
+        //                       CLEventPtr *        evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMMapARM(CLCommandQueuePtr  command_queue,
+        //                   bool           blocking_map,
+        //                   CLMapFlags      flags,
+        //                   IntPtr            svm_ptr,
+        //                   uint            size,
+        //                   uint           num_events_in_wait_list,
+        //                   const CLEventPtr *  event_wait_list,
+        //                   CLEventPtr *        evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueSVMUnmapARM(CLCommandQueuePtr  command_queue,
+        //                     IntPtr            svm_ptr,
+        //                     uint           num_events_in_wait_list,
+        //                     const CLEventPtr *  event_wait_list,
+        //                     CLEventPtr *        evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetKernelArgSVMPointerARM(CLKernelPtr    kernel,
+        //                            uint      arg_index,
+        //                            const IntPtr arg_value) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetKernelExecInfoARM(CLKernelPtr            kernel,
+        //                       cl_kernel_exec_info_arm  param_name,
+        //                       uint               param_value_size,
+        //                       const IntPtr         param_value) ;
+
+        //        /************************************************
+        //        * cl_intel_accelerator extension                *
+        //        * cl_intel_motion_estimation extension          *
+        //        * cl_intel_advanced_motion_estimation extension *
+        //        *************************************************/
+        //        extern CL_API_ENTRY cl_accelerator_intel CL_API_CALL
+        //clCreateAcceleratorINTEL(
+        //    CLContextPtr                   context,
+        //    cl_accelerator_type_intel    accelerator_type,
+        //    uint                       descriptor_size,
+        //    IntPtr                  descriptor,
+        //    int*                      errcode_ret) ;
+
+        //typedef cl_accelerator_intel(CL_API_CALL* clCreateAcceleratorINTEL_fn)(
+        //   CLContextPtr context,
+        //   cl_accelerator_type_intel accelerator_type,
+        //   uint descriptor_size,
+        //    IntPtr descriptor,
+        //    int*                      errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetAcceleratorInfoINTEL(
+        //    cl_accelerator_intel         accelerator,
+        //    cl_accelerator_info_intel    param_name,
+        //    uint                       param_value_size,
+        //    IntPtr                        param_value,
+        //    uint*                      param_value_size_ret) ;
+
+        //typedef int(CL_API_CALL* clGetAcceleratorInfoINTEL_fn)(
+        //   cl_accelerator_intel accelerator,
+        //   cl_accelerator_info_intel param_name,
+        //   uint param_value_size,
+        //   IntPtr param_value,
+        //   [Out] out uint param_value_size_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clRetainAcceleratorINTEL(
+        //    cl_accelerator_intel         accelerator) ;
+
+        //typedef int(CL_API_CALL* clRetainAcceleratorINTEL_fn)(
+        //   cl_accelerator_intel         accelerator) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clReleaseAcceleratorINTEL(
+        //    cl_accelerator_intel         accelerator) ;
+
+        //typedef int(CL_API_CALL* clReleaseAcceleratorINTEL_fn)(
+        //   cl_accelerator_intel         accelerator) ;
+
+
+        //****************************************
+        //* cl_intel_driver_diagnostics extension *
+        //*****************************************/
+
+
+        ////typedef uint cl_diagnostics_verbose_level;
+
+        //*******************************************
+        //* cl_intel_unified_shared_memory extension *
+        //********************************************/
+
+        ////typedef ulong         cl_device_unified_shared_memory_capabilities_intel;
+        ////typedef ulong 		cl_mem_properties_intel;
+        ////typedef ulong         cl_mem_alloc_flags_intel;
+        ////typedef uint             cl_mem_info_intel;
+        ////typedef uint             cl_unified_shared_memory_type_intel;
+        ////typedef uint             cl_mem_advice_intel;
+
+
+        //typedef IntPtr (CL_API_CALL *
+        //clHostMemAllocINTEL_fn)(
+        //    CLContextPtr context,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //typedef IntPtr (CL_API_CALL *
+        //clDeviceMemAllocINTEL_fn)(
+        //    CLContextPtr context,
+        //    CLDevicePtr device,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //typedef IntPtr (CL_API_CALL *
+        //clSharedMemAllocINTEL_fn)(
+        //    CLContextPtr context,
+        //    CLDevicePtr device,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //typedef int(CL_API_CALL*
+        //clMemFreeINTEL_fn)(
+        //    CLContextPtr context,
+        //    IntPtr ptr);
+
+        //typedef int(CL_API_CALL*
+        //clMemBlockingFreeINTEL_fn)(
+        //    CLContextPtr context,
+        //    IntPtr ptr);
+
+        //typedef int(CL_API_CALL*
+        //clGetMemAllocInfoINTEL_fn)(
+        //    CLContextPtr context,
+        //    IntPtr ptr,
+        //    cl_mem_info_intel param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    [Out] out uint param_value_size_ret) ;
+
+        //typedef int(CL_API_CALL*
+        //clSetKernelArgMemPointerINTEL_fn)(
+        //    CLKernelPtr kernel,
+        //    uint arg_index,
+        //    IntPtr arg_value) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueMemFillINTEL_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr dst_ptr,
+        //    IntPtr pattern,
+        //    uint pattern_size,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueMemcpyINTEL_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    bool blocking,
+        //    IntPtr dst_ptr,
+        //    IntPtr src_ptr,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueMemAdviseINTEL_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr ptr,
+        //    int size,
+        //    cl_mem_advice_intel advice,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clHostMemAllocINTEL(
+        //    CLContextPtr context,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clDeviceMemAllocINTEL(
+        //    CLContextPtr context,
+        //    CLDevicePtr device,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSharedMemAllocINTEL(
+        //    CLContextPtr context,
+        //    CLDevicePtr device,
+        //    const cl_mem_properties_intel* properties,
+        //    int size,
+        //    uint alignment,
+        //    [Out] out CLResult errcode_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clMemFreeINTEL(
+        //    CLContextPtr context,
+        //    IntPtr ptr) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clMemBlockingFreeINTEL(
+        //    CLContextPtr context,
+        //    IntPtr ptr) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetMemAllocInfoINTEL(
+        //    CLContextPtr context,
+        //    IntPtr ptr,
+        //    cl_mem_info_intel param_name,
+        //    uint param_value_size,
+        //    IntPtr param_value,
+        //    [Out] out uint param_value_size_ret) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clSetKernelArgMemPointerINTEL(
+        //    CLKernelPtr kernel,
+        //    uint arg_index,
+        //    IntPtr arg_value) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMemFillINTEL(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr dst_ptr,
+        //    IntPtr pattern,
+        //    uint pattern_size,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMemcpyINTEL(
+        //    CLCommandQueuePtr command_queue,
+        //    bool blocking,
+        //    IntPtr dst_ptr,
+        //    IntPtr src_ptr,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMemAdviseINTEL(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr ptr,
+        //    int size,
+        //    cl_mem_advice_intel advice,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+
+
+        //typedef int (CL_API_CALL *
+        //clEnqueueMigrateMemINTEL_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr ptr,
+        //    int size,
+        //    CLMemoryMigrationFlags flags,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMigrateMemINTEL(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr ptr,
+        //    int size,
+        //    CLMemoryMigrationFlags flags,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+
+        //* deprecated, use clEnqueueMemFillINTEL instead */
+
+        //typedef int(CL_API_CALL*
+        //clEnqueueMemsetINTEL_fn)(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr dst_ptr,
+        //    int value,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //[Obsolete][DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clEnqueueMemsetINTEL(
+        //    CLCommandQueuePtr command_queue,
+        //    IntPtr dst_ptr,
+        //    int value,
+        //    int size,
+        //    int num_events_in_wait_list,
+        //    CLEventPtr[] event_wait_list,
+        //    CLEventPtr* evt) ;
+
+        //***************************************************
+        //* cl_intel_create_buffer_with_properties extension *
+        //****************************************************/
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateBufferWithPropertiesINTEL(
+        //    CLContextPtr   context,
+        //    const cl_mem_properties_intel* properties,
+        //    CLMemoryFlags flags,
+        //    uint       size,
+        //    IntPtr       host_ptr,
+        //    int *     errcode_ret) ;
+
+        //typedef CLMemoryPtr(CL_API_CALL*
+        //clCreateBufferWithPropertiesINTEL_fn)(
+        //    CLContextPtr context,
+        //    const cl_mem_properties_intel* properties,
+        //    CLMemoryFlags flags,
+        //    uint       size,
+        //    IntPtr       host_ptr,
+        //    int *     errcode_ret) ;
+
+        //***************************************************************
+        //* cl_intel_sharing_format_query
+        //***************************************************************/
+
+
+        //typedef uint     CLGLObjectType;
+        //typedef uint     CLGLTextureInfo;
+        //typedef uint     cl_gl_platform_info;
+        //typedef struct __GLsync *cl_GLsync;
+
+
+
+        //typedef uint CLGLContextInfo;
+
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetGLContextInfoKHR(const CLContextProperties * properties,
+        //                      CLGLContextInfo            param_name,
+        //                      uint                        param_value_size,
+        //                      IntPtr                        param_value,
+        //                      uint *                      param_value_size_ret) ;
+
+        //typedef int(CL_API_CALL* clGetGLContextInfoKHR_fn)(
+        //    const CLContextProperties* properties,
+        //    CLGLContextInfo            param_name,
+        //    uint                        param_value_size,
+        //    IntPtr                        param_value,
+        //    uint *                      param_value_size_ret);
+
+        //* 
+        // *  cl_khr_gl_event extension
+        // */
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clCreateEventFromGLsyncKHR(CLContextPtr context,
+        //                           cl_GLsync  sync,
+        //                           int *   errcode_ret) CL_API_SUFFIX__VERSION_1_1;
+
+        //***************************************************************
+        //* cl_intel_sharing_format_query_gl
+        //***************************************************************/
+
+        //* when cl_khr_gl_sharing is supported */
+
+        //[DllImport("opencl.dll", EntryPoint = "printf", CallingConvention = CallingConvention.Cdecl,  CharSet = CharSet.Ansi)]
+        //clGetSupportedGLTextureFormatsINTEL(
+        //    CLContextPtr context,
+        //    CLMemoryFlags flags,
+        //    CLMemoryObjectType Type,
+        //    uint num_entries,
+        //    cl_GLenum* gl_formats,
+        //    uint* num_texture_formats) ;
+
+        //typedef int(CL_API_CALL*
+        //clGetSupportedGLTextureFormatsINTEL_fn)(
+        //    CLContextPtr context,
+        //    CLMemoryFlags flags,
+        //    CLMemoryObjectType Type,
+        //    uint num_entries,
+        //    cl_GLenum * gl_formats,
+        //    uint * num_texture_formats);
