@@ -9,7 +9,7 @@ Using a compute shader is pretty straighforward:
 
 
 
-```
+```C#
 /// Test Compute Shader:
 void TestComputeShader()
 {
@@ -72,7 +72,8 @@ void TestComputeShader()
 ![The expected output from our Hello World Example.](/Images/VsDebugConsole_ZPxX1Vtxj9.png)
 
 Below is an example of how I shape local workers for the total amount of threads on the global group. 
-```
+
+```C#
 
         /// <summary>
         /// Sets the max number of local workgroups that can be executed at once
