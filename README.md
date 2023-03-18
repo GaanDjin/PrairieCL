@@ -110,6 +110,22 @@ Below is an example of how I shape local workers for the total amount of threads
         }
 ```
 
+Some GPUs don't support doubles unless you add the extension:
+```C
+#ifdef cl_khr_fp64
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+#endif
+```
+
+Another useful function of this wrapper is `ComputeShader.AddInclude` which allows you to add several include files
+that can be used in other files letting you split compute shader source code into everal files or parts. 
+
+As always, if you find a problem please let me know. 
+
+
 [OpenCL](https://www.khronos.org/opencl/)
+
 [OpenCL-Guide](https://github.com/KhronosGroup/OpenCL-Guide)
+
 [OpenCL Reference](https://registry.khronos.org/OpenCL/sdk/3.0/docs/man/html/)
+
