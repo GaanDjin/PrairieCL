@@ -50,6 +50,8 @@ void TestComputeShader()
     // Basically this depends on the GPU hardware but allows us to process more threads than GPU can compute at once.    
     // We could use (4,4,4) and run all 64 threads at once. This doesn't really become an issue until you want to process
     // a larger amount of data. Say 262,144 data points in a 64*64*64 3D grid. 
+    // Finally the last parameter is a CLBuffer array. This must match the same number of and data size of the kernel parameters. 
+    // In this case we have one int* BufferData parameter and it needs to be 64 ints long (one for each thread executed)
     int session = testShader.ExecuteKernel("helloworld", new Vector3i(4, 4, 4), new Vector3i(1, 1, 1), new CLBuffer[] { parameter });
     // Next we wait for the GPU to finish executing the kernel job as ExecuteKernel dispatched the request asynconously.
     testShader.Wait(session);
