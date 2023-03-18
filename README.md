@@ -3,7 +3,7 @@ OpenCL wrapper for C#
 
 This small library wrapped OpenCL using PInvoke. There are no "unsafe" directives and use the OpenCL documentation for *almost* everywhere. 
 
-This library is thread safe and in another project I use this to generate 64*64*64 voxel chunks of terrain over 11 threads. 
+This library is thread safe and in another project I use this to generate 64\*64\*64 voxel chunks of terrain over 11 threads. 
 
 Using a compute shader is pretty straighforward: 
 
